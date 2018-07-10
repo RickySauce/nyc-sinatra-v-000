@@ -9,8 +9,8 @@ class FiguresController < ApplicationController
     if !params["title"]["name"].empty?
       @title = Title.find_or_create_by(name: params["title"]["name"])
     end
-    @figure.title_ids.flatten << params["figure"]["title_ids"] << @title.id
-
+     @title_ids = params["figure"]["title_ids"] << @title.id
+     @title_ids.each {|id| @figure.title_ids << id}
     binding.pry
   end
 
