@@ -58,7 +58,6 @@ class FiguresController < ApplicationController
     @landmark_ids.each {|id| @figure.landmarks << Landmark.find_by_id(id)} unless @landmark_ids.nil?
     @figure.save
     redirect "/figures/#{@figure.id}"
-    binding.pry
   end
 
 end
