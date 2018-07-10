@@ -29,4 +29,8 @@ class FiguresController < ApplicationController
     "Successfully Created New Figure"
   end
 
+  get '/figures/:id' do
+    binding.pry
+  end
+
 end
