@@ -5,7 +5,6 @@ class FiguresController < ApplicationController
   end
 
   get '/figures/:id' do
-    binding.pry
     erb :'/figures/show'
   end
 
