@@ -9,10 +9,8 @@ class FiguresController < ApplicationController
     @figure = Figure.create(name: params["figure"]["name"])
     if !params["title"]["name"].empty?
       @title = Title.create(name: params["title"]["name"])
+      @figure.title_ids << @title.id
     end
-     @title_ids = params["figure"]["title_ids"] << @title.id if !@title.nil?
-     @title_ids.each {|id| @figure.title_ids << id}
-     @figure.save
     binding.pry
   end
 
