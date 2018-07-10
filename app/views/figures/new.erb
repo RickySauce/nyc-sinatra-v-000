@@ -5,8 +5,8 @@
   <br><br>
   <input type="text" name="figure[name]" id="figure_name">
   <br><br>
-  <%Figure.all.each do |figure|%>
-  <ul><input type="checkbox" name="figure[title_ids][]" value="<%=figure.id%>" id="<%=figure.id%>"><%=figure.name%></input></ul>
+  <%Title.all.each do |titlee|%>
+  <ul><input type="checkbox" name="figure[title_ids][]" value="<%=title.id%>" id="<%=title.id%>"><%=title.name%></input></ul>
   <%end%>
   <br><br>
   <label>Create New Title:</label>
