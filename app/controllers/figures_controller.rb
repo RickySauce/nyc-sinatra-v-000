@@ -10,6 +10,7 @@ class FiguresController < ApplicationController
     if !params["title"]["name"].empty?
       @title = Title.create(name: params["title"]["name"])
       @figure.title_ids << @title.id
+      binding.pry
     end
     binding.pry
   end
