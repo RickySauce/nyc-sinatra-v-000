@@ -12,6 +12,7 @@ class FiguresController < ApplicationController
     end
     @title_ids = params["figure"]["title_ids"]
     @title_ids.each {|id| @figure.titles << Title.find_by_id(id)} unless @title_ids.nil?
+    binding.pry
     if !params["landmark"]["name"].empty?
       @landmark = Landmark.create(name: params["landmark"]["name"], year_completed: params["landmark"]["year_completed"])
       @figure.landmarks << @landmark
