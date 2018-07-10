@@ -15,6 +15,7 @@ class FiguresController < ApplicationController
     binding.pry
     if !params["landmark"]["name"].empty?
       @landmark = Landmark.create(name: params["landmark"]["name"])
+      binding.pry
       @landmark.year_completed = params["landmark"]["year_completed"] unless nil?
       @figure.landmarks << @landmark
     end
