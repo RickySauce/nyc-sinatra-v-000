@@ -8,9 +8,9 @@ class FiguresController < ApplicationController
     binding.pry
     @figure = Figure.create(name: params["figure"]["name"])
     if !params["title"]["name"].empty?
-      @title = Title.find_or_create_by(name: params["title"]["name"])
+      @title = Title.create(name: params["title"]["name"])
     end
-     @title_ids = params["figure"]["title_ids"] << @title.id
+     @title_ids = params["figure"]["title_ids"] << @title.id if !@title.nil?
      @title_ids.each {|id| @figure.title_ids << id}
      @figure.save
     binding.pry
