@@ -11,7 +11,7 @@
   <br><br>
   <label>Create New Title:</label>
   <br><br>
-  <input type="text" name="title[name]" value="">
+  <input type="text" name="title[name]" value="" id="new_title">
   <br><br>
   <%Landmark.all.each do |landmark|%>
   <ul><input type="checkbox" name="figure[landmark_ids][]" value="<%=landmark.id%>" id="<%=landmark.id%>"><%=landmark.name%></input></ul>
@@ -19,7 +19,7 @@
   <br><br>
   <label>Create New Landmark:</label>
   <br><br>
-  <input type="text" name="landmark[name]" value="">
+  <input type="text" name="landmark[name]" value="" id="new_landmark">
   <br><br>
   <input type="submit" value="Create Figure">
 </form>
