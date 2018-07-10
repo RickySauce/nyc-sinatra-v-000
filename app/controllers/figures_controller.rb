@@ -8,7 +8,7 @@ class FiguresController < ApplicationController
     @figure = Figure.create(name: params["figure"]["name"])
     if !params["title"]["name"].empty?
       @title = Title.create(name: params["title"]["name"])
-      @figure.title_ids << @title.id
+      @figure.titles << @title
       binding.pry
     end
     binding.pry
