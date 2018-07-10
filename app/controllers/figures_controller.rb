@@ -11,6 +11,7 @@ class FiguresController < ApplicationController
     end
      @title_ids = params["figure"]["title_ids"] << @title.id
      @title_ids.each {|id| @figure.title_ids << id}
+     @figure.save
     binding.pry
   end
 
