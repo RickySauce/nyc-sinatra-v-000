@@ -40,6 +40,7 @@ class FiguresController < ApplicationController
   end
 
   post '/figures/:id' do
+    binding.pry
     @figure = Figure.find(name: params["figure"]["name"])
     binding.pry
   end
