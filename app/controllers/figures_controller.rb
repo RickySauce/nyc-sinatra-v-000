@@ -41,6 +41,7 @@ class FiguresController < ApplicationController
 
   post '/figures/:id' do
     @figure = Figure.find_by_id(params["id"])
+    binding.pry
     @figure.name = params["figure"]["name"]
     binding.pry
     if !params["title"]["name"].empty?
