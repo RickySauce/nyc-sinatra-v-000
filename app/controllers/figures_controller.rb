@@ -59,6 +59,7 @@ class FiguresController < ApplicationController
     @landmark_ids = params["figure"]["landmark_ids"]
     @landmark_ids.each {|id| @figure.landmarks << Landmark.find_by_id(id)} unless @landmark_ids.nil?
     @figure.save
+    binding.pry
   end
 
 end
