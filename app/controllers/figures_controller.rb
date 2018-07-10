@@ -11,7 +11,7 @@ class FiguresController < ApplicationController
       @figure.titles << @title
     end
     @title_ids = params["figure"]["title_ids"]
-    @title_ids.each {|id| @figure.titles << Title.find_by_id(id)}
+    @title_ids.each {|id| @figure.titles << Title.find_by_id(id)} unless @title_ids.nil?
     binding.pry
   end
 
