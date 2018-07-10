@@ -13,4 +13,8 @@ class LandmarksController < ApplicationController
     "Successfully created a New Landmark"
   end
 
+  get '/landmarks/:id' do
+    erb :'/landmarks/show'
+  end
+
 end
