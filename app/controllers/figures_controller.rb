@@ -31,6 +31,7 @@ class FiguresController < ApplicationController
 
   get '/figures/:id' do
     binding.pry
+    erb :'/figures/show'
   end
 
 end
