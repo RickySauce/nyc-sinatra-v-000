@@ -11,5 +11,9 @@
   <br><br>
   <label>Create New Title:</label>
   <input type="text" name="title_name" value="">
+  <br><br>
+  <%Landmark.all.each do |landmark|%>
+  <ul><input type="text" name="" value=""><%=landmark.name%></input></ul>
+  <%end%>
   <input type="submit" value="Create Figure">
 </form>
