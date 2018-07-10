@@ -9,7 +9,6 @@ class LandmarksController < ApplicationController
   end
 
   post '/landmarks' do
-    binding.pry
     @landmark = Landmark.create(name: params["landmark"]["name"], year_completed: params["landmark"]["year_completed"])
     "Successfully created a New Landmark"
   end
