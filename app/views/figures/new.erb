@@ -7,5 +7,6 @@
   <br><br>
   <%Figure.all.each do |figure|%>
   <ul><input type="checkbox" name="titles[]" value="<%=figure.id%>" id="<%=figure.id%>"><%=figure.name%></input></ul>
+  <%end%>
   <input type="submit" value="Create Figure">
 </form>
